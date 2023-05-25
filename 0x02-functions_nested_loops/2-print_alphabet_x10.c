@@ -2,20 +2,23 @@
 
 /**
  * main - Entry point.
- * Description: a function tha
+ * a function that prints 10 times the alphabet, in lowercase,
  * followed by a new line.
- * Return (0) always.
+ *
+ * Return: always 0.
  */
 
-void print_alphabet(void)
+
+void print_alphabet_x10(void)
 {
+	int i = 1;
 	char alpha = 'a';
 
-	for (alpha = 'a'; alpha <= 'z'; alpha++)
+	for (i = 1; i <= 10; i++)
 	{
-		_putchar(alpha);
-		_putchar('\n');
+		for (alpha = 'a'; alpha <= 'z';  alpha++)
+			_putchar(alpha);
+			 _putchar('\n');
 	}
 }
-
 
