@@ -10,9 +10,9 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	char *merci = dest;
+	char *begin = dest;
 
-	while (n-- && *src != '\0')
+	while (n-- && *src)
 	{
 		*dest++ = *src++;
 	}
@@ -21,5 +21,5 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		*dest = '\0';
 	}
-	return (merci);
+	return (begin);
 }
