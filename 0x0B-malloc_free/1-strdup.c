@@ -13,6 +13,10 @@ char *_strdup(char *str)
 {
 	char *ptstr;
 	int length_str;
+	int count;
+
+	if (str == NULL)
+		return (NULL);
 
 	/*get the length of str*/
 	while (str[length_str] != '\0')
@@ -29,7 +33,6 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 	/*copy string the new location*/
-	int count;
 
 	for (count = 0; str[count] !=  '\0'; count++)
 	{
