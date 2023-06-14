@@ -34,7 +34,7 @@ char *_strdup(char *str)
 	}
 	/*copy string the new location*/
 
-	for (count = 0; str[count] !=  '\0'; count++)
+	for (count = 0; str[count] !=  length_str; count++)
 	{
 		ptstr[count] = str[count];
 	}
