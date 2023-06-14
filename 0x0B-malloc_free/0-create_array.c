@@ -14,6 +14,10 @@ char *create_array(unsigned int size, char c)
 {
 	char *ptr;
 	unsigned int i;
+
+	if (size == 0)
+		return (NULL);
+
 	/*allocating enough space for all array members */
 
 	ptr = malloc(size * sizeof(char));
@@ -25,10 +29,10 @@ char *create_array(unsigned int size, char c)
 
 	/* put a char c in each of the memory locations*/
 
-	for(i = 0; i < size; i++)
+	for (i = 0; i < size; i++)
 	{
 		/*assign the char to the specific memory location*/
-		ptr[i]= c;
+		ptr[i] = c;
 	}
 
 	return (ptr);
