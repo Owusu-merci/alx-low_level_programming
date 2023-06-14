@@ -25,7 +25,7 @@ char *_strdup(char *str)
 	}
 
 	/* determine size and allocate enough memory space for it */
-	ptstr = malloc(length_str * sizeof(char) + 1);
+	ptstr = malloc(length_str * sizeof(*ptstr) + 1);
 
 	/*check if malloc does not return NULL*/
 	if (ptstr == NULL)
@@ -34,7 +34,7 @@ char *_strdup(char *str)
 	}
 	/*copy string the new location*/
 
-	for (count = 0; count < str[length_str]; count++)
+	for (count = 0; count < length_str; count++)
 	{
 		ptstr[count] = str[count];
 	}
